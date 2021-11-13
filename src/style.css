@@ -1,0 +1,35 @@
+body {
+  color: grey !important;
+}
+input {
+  display: block;
+  border-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit !important;
+}
+i {
+  color: grey;
+}
+ul {
+  list-style-type: none;
+  font-size: large;
+  color: grey;
+}
+.container {
+  display: block;
+  margin-top: 20px;
+}
+.dayIcons {
+  font-size: 70px;
+}
+.currentTemp {
+  font-size: 70px;
+}
+.submit {
+  visibility: hidden;
+}
+.tempUnit {
+  text-decoration: none;
+}
