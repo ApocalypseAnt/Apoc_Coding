@@ -4,16 +4,113 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>GitHub</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/74870fb821.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Weather App</title>
   </head>
-  <body>
-    <h1>GitHub</h1>
-    <form>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <input type="submit" value="Login" />
-    </form>
-    <script src="script.js"></script>
+
+  <body class="border p-5 rounded">
+    <!--- Search Field // Calendar, Settings and Sharing-->
+    <div class="container-md">
+      <div class="row align-items-start">
+        <div class="col-9">
+          <div class="mb-3">
+            <form id="search-form">
+              <input
+                type="text"
+                class="form-control border p-3 rounded-pill"
+                id="search-input-text"
+                placeholder="Choose City"
+                autocomplete="off"
+                autofocus="on"
+              />
+              <input class="submit" type="submit" value="" />
+            </form>
+          </div>
+        </div>
+        <div class="col">
+          <div>
+            <button type="button" class="btn position-relative">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div>
+            <button type="button" class="btn position-relative">
+              <i class="fas fa-calendar-day"></i>
+            </button>
+          </div>
+          <div>
+            <button type="button" class="btn position-relative">
+              <a href="settings.html"><i class="fas fa-cog"></i></a>
+            </button>
+          </div>
+          <div>
+            <button type="button" class="btn position-relative">
+              <a href="share.html"><i class="fas fa-share-alt"></i></a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--- Current City // Current Date // Curent Temperature -->
+    <div class="container-md">
+      <div class="row align-items-start">
+        <div class="col">
+          <h1 id="displayCity">City</h1>
+          <button type="button" class="btn btn-secondary" id="currentLocal">Here, now!</button>
+          <h2 id="displayDate">Date</h2>
+        </div>
+        <div class="col thermometer">
+          <div class="currentTemp"> <span id="current-temp"> </span></a><i class="fas fa-temperature-high"></i>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+    <br />
+
+    <!--- Next coming days -->
+    <div class="container border p-3 rounded-pill">
+      <div class="row days">
+        <div class="col-3">
+          Tomorrow
+          <br />
+          <i class="fas fa-sun dayIcons"></i>
+        </div>
+        <div class="col-2">
+          Day 3
+          <br />
+          <i class="fas fa-cloud-showers-heavy dayIcons"></i>
+        </div>
+        <div class="col-2">
+          Day 4
+          <br />
+          <i class="fas fa-cloud-sun-rain dayIcons"></i>
+        </div>
+        <div class="col-2">
+          Day 5
+          <br />
+          <i class="fas fa-cloud-sun dayIcons"></i>
+        </div>
+        <div class="col-3">
+          Day 6
+          <br />
+          <i class="far fa-snowflake dayIcons"></i>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
   </body>
 </html>
